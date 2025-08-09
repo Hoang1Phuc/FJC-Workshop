@@ -1,6 +1,22 @@
 # Change the default theme to be use when building the site with Hugo
 theme = "hugo-theme-learn"
 
+# === BẮT BUỘC: điền đúng baseURL ===
+# Nếu repo là <username>.github.io        -> "https://<username>.github.io/"
+# Nếu repo là bất kỳ tên khác (project)   -> "https://<username>.github.io/<repo>/"
+baseURL = "https://hoang1phuc.github.io/FJC-Workshop/"
+
+# Cách build: dùng thư mục /docs để GitHub Pages phục vụ trực tiếp từ nhánh main
+publishDir = "docs"
+# Giúp đường dẫn asset load đúng khi site nằm trong /<repo>/
+relativeURLs = true
+canonifyURLs = true
+
+# Đa ngôn ngữ: tạo /en/ và /vi/
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
+
+
 # For search functionality
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
